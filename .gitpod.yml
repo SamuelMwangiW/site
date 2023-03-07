@@ -21,6 +21,7 @@ tasks:
       ./vendor/bin/sail up -d &&
       ./vendor/bin/sail php artisan key:generate &&
       ./vendor/bin/sail php artisan storage:link &&
+      ./vendor/bin/sail php artisan migrate --seed &&
       gp sync-done sail-up
 
   - name: Get composer deps
